@@ -23,9 +23,6 @@ import android.app.TimePickerDialog
 import androidx.compose.foundation.clickable
 import kotlinx.coroutines.launch
 import androidx.compose.material3.Text
-import androidx.compose.material3.DropdownMenu
-import androidx.compose.material3.DropdownMenuItem
-
 
 class MainActivity : ComponentActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -57,9 +54,11 @@ fun MainScreen() {
 
 @Composable
 fun LogoAndDescription() {
-    Column(modifier = Modifier
-        .fillMaxWidth()
-        .padding(16.dp), horizontalAlignment = Alignment.CenterHorizontally) {
+    Column(
+        modifier = Modifier
+            .fillMaxWidth()
+            .padding(16.dp), horizontalAlignment = Alignment.CenterHorizontally
+    ) {
         Image(
             painter = painterResource(R.drawable.hitchb),
             contentDescription = "Logo HitchBurger",
@@ -85,10 +84,10 @@ fun Greeting(name: String, burgerList: List<String>, modifier: Modifier = Modifi
             modifier = Modifier.clickable { expanded = true },
             fontSize = 18.sp
         )
-        DropdownMenu(
+        /*DropdownMenu(
             expanded = expanded,
-            onDismissRequest = { expanded = false }
-        ) {
+            onDismissRequest = { expanded = false })
+        {
             burgerList.forEach { burger ->
                 DropdownMenuItem(
                     onClick = {
@@ -99,11 +98,9 @@ fun Greeting(name: String, burgerList: List<String>, modifier: Modifier = Modifi
                     Text(text = burger)
                 }
             }
-        }
+        }*/ //une erreur que je n(ai pas réussi à surmonter mais je pense que le code est bon
     }
 }
-
-
 
 
 
@@ -127,7 +124,16 @@ fun TimePickerExample() {
 fun DefaultPreview() {
     HitchBurgerTheme {
         LogoAndDescription()
-        Greeting("Android", listOf("Burger du chef", "Cheese Burger", "Burger Montagnard", "Burger Italien", "Burger Végétarien"))
+        Greeting(
+            "Android",
+            listOf(
+                "Burger du chef",
+                "Cheese Burger",
+                "Burger Montagnard",
+                "Burger Italien",
+                "Burger Végétarien"
+            )
+        )
         TimePickerExample()
     }
 }
@@ -145,8 +151,14 @@ fun OrderForm() {
     var errorMessage by remember { mutableStateOf("") }
 
     Column(modifier = Modifier.padding(16.dp)) {
-        TextField(value = firstName, onValueChange = { firstName = it }, label = { Text("First Name") })
-        TextField(value = lastName, onValueChange = { lastName = it }, label = { Text("Last Name") })
+        TextField(
+            value = firstName,
+            onValueChange = { firstName = it },
+            label = { Text("First Name") })
+        TextField(
+            value = lastName,
+            onValueChange = { lastName = it },
+            label = { Text("Last Name") })
         TextField(value = address, onValueChange = { address = it }, label = { Text("Address") })
         TextField(value = phone, onValueChange = { phone = it }, label = { Text("Phone") })
         // Add DropdownMenu for burger selection and TimePickerDialog for deliveryTime here
