@@ -65,7 +65,7 @@ fun OrderForm(
                         delivery_time = deliveryTime
                     )
                 )
-                sendOrder(orderDetails, onOrderPlaced)
+//                sendOrder(orderDetails, onOrderPlaced)
             }
         }) {
             Text("Order Now")

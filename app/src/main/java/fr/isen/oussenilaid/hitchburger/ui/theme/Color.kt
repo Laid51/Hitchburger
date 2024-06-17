@@ -2,10 +2,15 @@ package fr.isen.oussenilaid.hitchburger.ui.theme
 
 import androidx.compose.ui.graphics.Color
 
-val Purple80 = Color(0xFFD0BCFF)
-val PurpleGrey80 = Color(0xFFCCC2DC)
-val Pink80 = Color(0xFFEFB8C8)
+// Définition des couleurs pour le thème
+val Red = Color(0xFFFF0000) // Rouge
+val White = Color(0xFFFFFFFF) // Blanc
 
-val Purple40 = Color(0xFF6650a4)
-val PurpleGrey40 = Color(0xFF625b71)
-val Pink40 = Color(0xFF7D5260)
+// Vous pouvez remplacer ou ajouter ces couleurs dans votre thème
+val Purple80 = Red
+val PurpleGrey80 = White
+val Pink80 = Red
+
+val Purple40 = Red
+val PurpleGrey40 = White
+val Pink40 = Red

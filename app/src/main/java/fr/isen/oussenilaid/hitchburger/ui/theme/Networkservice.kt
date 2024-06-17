@@ -26,11 +26,6 @@ data class OrderMessage(
     val delivery_time: String
 )
 
-interface OrderService {
-    @POST("user/order")
-    suspend fun placeOrder(@Body orderDetails: OrderDetails): Response<Void>
-}
-
 object NetworkModule {
     fun provideRetrofitService(): OrderService {
         return Retrofit.Builder()
