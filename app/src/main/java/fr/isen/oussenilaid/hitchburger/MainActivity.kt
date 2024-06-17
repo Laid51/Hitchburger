@@ -169,7 +169,7 @@ fun OrderForm() {
             } else {
                 val orderDetails = OrderDetails(
                     id_shop = 1,
-                    id_user = 353, // This should be dynamically retrieved
+                    id_user = 353,
                     msg = OrderMessage(
                         firstname = firstName,
                         lastname = lastName,
@@ -182,9 +182,7 @@ fun OrderForm() {
                 coroutineScope.launch {
                     val result = NetworkModule.provideRetrofitService().placeOrder(orderDetails)
                     if (result.isSuccessful) {
-                        // Handle success
                     } else {
-                        // Handle failure
                     }
                 }
             }

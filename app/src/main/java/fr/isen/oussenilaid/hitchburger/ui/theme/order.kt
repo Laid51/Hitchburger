@@ -14,7 +14,7 @@ import androidx.compose.ui.text.input.KeyboardType
 
 @Composable
 fun OrderForm(
-    userId: Int,  // Supposons que ce soit l'ID utilisateur transmis via le mail
+    userId: Int,
     onOrderPlaced: (Boolean) -> Unit  // Callback pour gérer la navigation selon le résultat
 ) {
     var firstName by remember { mutableStateOf("") }
@@ -47,7 +47,7 @@ fun OrderForm(
             label = { Text("Phone") },
             keyboardOptions = KeyboardOptions(keyboardType = KeyboardType.Phone)
         )
-        // TimePicker and DropdownMenu code remains similar to the first part.
+
 
         Button(onClick = {
             if (firstName.isBlank() || lastName.isBlank() || address.isBlank() || phone.isBlank() || deliveryTime == "Select Time") {
