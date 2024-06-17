@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="16dp">
+
+    <!-- ImageView pour le logo -->
+    <ImageView
+        android:id="@+id/imageViewLogo"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:src="@drawable/logo" />
+
+    <!-- Texte descriptif -->
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:text="Veuillez remplir les informations suivantes pour commander votre burger :"
+        android:textAlignment="center" />
+    <!-- Champ de texte pour le prénom -->
+    <EditText
+        android:id="@+id/etFirstName"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Prénom"
+        android:inputType="textPersonName" />
+
+    <!-- Champ de texte pour le nom -->
+    <EditText
+        android:id="@+id/etLastName"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Nom"
+        android:inputType="textPersonName" />
+
+    <!-- Champ de texte pour l'adresse -->
+    <EditText
+        android:id="@+id/etAddress"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Adresse"
+        android:inputType="textPostalAddress" />
+
+    <!-- Champ de texte pour le numéro de téléphone -->
+    <EditText
+        android:id="@+id/etPhone"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Numéro de téléphone"
+        android:inputType="phone" />
+
+    <!-- Spinner pour la sélection du burger -->
+    <Spinner
+        android:id="@+id/spinnerBurgers"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
+
+    <!-- Bouton pour valider le formulaire -->
+    <Button
+        android:id="@+id/btnOrder"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Commander"
+        android:layout_gravity="center_horizontal" />
+
+</LinearLayout>
